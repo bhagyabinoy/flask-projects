@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    <title>home</title>
+    <link rel="icon" href="{{url_for('static', filename='images/icon.jpg')}}" type="image/gif" sizes="16x16">
+  </head>
+
+  <body>
+  
+  <header>
+    <div class="row">
+      <div class="col-md-6 pl-3">
+       <img src="{{url_for('static', filename='images/thumb.png')}}" class="rounded mx-auto d-block" width="280" height="120">
+      </div>
+
+      <!-- nav bar -->
+      <div class="col-md-6 pt-5">
+       
+        <ul class="nav nav-pills">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About Us</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('pestcontrol')}}">Pest Control</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="{{url_for('service')}}" role="button" aria-expanded="false">Our Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{url_for('servicemenu')}}">Service Menu</a></li>
+            <li><a class="dropdown-item" href="{{url_for('areasofapp')}}">Areas of Application</a></li>
+            <li><a class="dropdown-item" href="{{url_for('generalpest')}}">General Pest Management</a></li>
+            <li><a class="dropdown-item" href="{{url_for('sanitization')}}">Sanitization</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('contact')}}">Contact Us</a>
+        </li>
+
+        
+      </ul>
+    </div>
+  </div>
+  </header>
+    
+  <br>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    
+        
+        <div>
+          <img src="{{url_for('static', filename='images/home.jpg')}}" class="rounded mx-auto d-block" alt="">    
+        </div>
+        
+        <script>
+          var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?76760';
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = url;
+          var options = {
+        "enabled":true,
+        "chatButtonSetting":{
+            "backgroundColor":"#4dc247",
+            "ctaText":"",
+            "borderRadius":"25",
+            "marginLeft":"0",
+            "marginBottom":"50",
+            "marginRight":"50",
+            "position":"right"
+        },
+        "brandSetting":{
+            "brandName":"PRIMORDIAL SERVICES",
+            "brandSubTitle":"Typically replies within a day",
+            "brandImg":"https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+            "welcomeText":"Hi there!\nHow can I help you?",
+            "messageText":"Hello, I have a question about {{page_link}}",
+            "backgroundColor":"#0a5f54",
+            "ctaText":"Start Chat",
+            "borderRadius":"25",
+            "autoShow":false,
+            "phoneNumber":"918089768767"
+        }
+      };
+          s.onload = function() {
+              CreateWhatsappChatWidget(options);
+          };
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+  
+      </script>
+
+  </body>
+
+</html>

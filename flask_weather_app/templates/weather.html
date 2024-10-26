@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Flask Weather App</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='output_style.css') }}">
+</head>
+<body>
+<img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" width="150px">
+<h5> Weather in {{weather.name}}, {{weather.sys.country}}</h5>
+<p> Description: {{ weather.weather[0].description.title() }}</p>
+<p> Current Temperature: {{weather.main.temp}}&#176</p>
+<p> Feels Like: {{weather.main.feels_like}}&#176</p>
+<p> Wind: {{weather.wind.speed}}mph</p>
+<p> Humidity: {{weather.main.humidity}}&#37;</p>
+<p> Pressure: {{weather.main.pressure}}mB</p>
+<p> Latitude: {{ weather.coord.lat }}&#176;</p>
+<p> Longtitude: {{ weather.coord.lon }}&#176;</p>
+<button type="submit" class="btn btn-primary btn-block" onclick="history.back()">Back</button>
+</body>
+</html>
